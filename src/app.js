@@ -22,7 +22,13 @@ export class NewsAgregator {
 
     fetchNews() {
         let channel = this.channelSelector.selectedChannel();
-        let amount = document.getElementById("articles-amount").valueAsNumber || 20;
+        let amount = document.getElementById("articles-amount").valueAsNumber;
+
+        if(amount > 100) {
+            amount = 100
+        } else if (amount <= 0 || !amount) {
+            amount = 20
+        }
 
         return fetch(`https://newsapi.org/v2/everything?sources=${channel}&pageSize=${amount}&apiKey=f289a45dd95b4b26accd20b486875b1a`)
             .then((response) => response.json())
