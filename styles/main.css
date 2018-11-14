@@ -63,6 +63,11 @@ input {
 
 button {
     width: 10rem;
+    height: 3rem;
+    border: solid 2px darkslategray;
+    border-radius: 0.5rem;
+    background-color: #fbf8f3;
+    font-size: 1.6rem;
 }
 
 main {
