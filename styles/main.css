@@ -1,0 +1,74 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    background:
+            radial-gradient(black 3px, transparent 4px),
+            radial-gradient(black 3px, transparent 4px),
+            linear-gradient(#fff 4px, transparent 0),
+            linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+            linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+            #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0 0, 0 0, 0 0, 0 0;
+}
+
+header {
+    max-width: 120rem;
+    margin: 0 auto 4rem auto;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    background-color: lightgray;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 4rem;
+}
+
+h4 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+label {
+    max-width: 40rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+select,
+input {
+    box-sizing: border-box;
+    width: 20rem;
+}
+
+button {
+    width: 7rem;
+}
+
+main {
+    max-width: 120rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    background-color: lightgray;
+}
+
+main article {
+    padding: 3rem;
+}
+
+main .content {
+    margin-bottom: 2rem;
+}
