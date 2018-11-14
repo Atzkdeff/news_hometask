@@ -19,7 +19,7 @@ export class NewsList {
     }
 
     createArticle(article) {
-        let elementHTML = `
+        return `
             <article>
                 <h4>${ article.title }</h4>
                 
@@ -31,7 +31,6 @@ export class NewsList {
             </article>
             <hr/>
         `;
-        return elementHTML;
     }
 
     clear() {
