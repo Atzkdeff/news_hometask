@@ -11,7 +11,7 @@ export class ChannelSelector {
         });
     }
 
-    createOption(name, id) {
+    createOption(name, id,) {
         let element;
         element = document.createElement("option");
         element.textContent = name;
@@ -20,6 +20,7 @@ export class ChannelSelector {
     }
 
     selectedChannel() {
-        return document.getElementById("channel-list").selectedOptions[0].getAttribute("id");
+        const list = document.getElementById("channel-list");
+        return list.options[list.selectedIndex].id;
     }
 }

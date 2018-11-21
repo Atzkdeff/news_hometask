@@ -1,3 +1,6 @@
+import "@babel/polyfill";
+import "whatwg-fetch";
+
 import { ChannelSelector } from "./channel-selector.js";
 import { NewsList } from "./news-list.js";
 
@@ -14,10 +17,10 @@ export class NewsAgregator {
             .then((articles) => this.newsList.addNews(articles))
     }
 
-    fetchChannels() {
-        return fetch("https://newsapi.org/v2/sources?apiKey=f289a45dd95b4b26accd20b486875b1a")
-            .then((response) => response.json())
-            .then((json) => json.sources)
+    async fetchChannels() {
+        let response = await fetch("https://newsapi.org/v2/sources?apiKey=f289a45dd95b4b26accd20b486875b1a");
+        let channels = await response.json();
+        return channels.sources;
     }
 
     fetchNews() {

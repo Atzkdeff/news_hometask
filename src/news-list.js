@@ -11,14 +11,14 @@ export class NewsList {
         return newsList
     }
 
-    addNews(articles) {
+    addNews(articles,) {
         this.articles = articles;
         this.articles.forEach((article) => {
             this.newsList.insertAdjacentHTML("beforeEnd", this.createArticle(article));
         });
     }
 
-    createArticle(article) {
+    createArticle(article,) {
         return `
             <article>
                 <h4>${ article.title }</h4>
