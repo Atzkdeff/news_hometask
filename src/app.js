@@ -25,7 +25,7 @@ export class NewsAgregator {
 
     fetchNews() {
         let channel = this.channelSelector.selectedChannel();
-        let amount = document.getElementById("articles-amount").valueAsNumber;
+        let amount = parseInt(document.getElementById("articles-amount").value);
 
         if(amount > 100) {
             amount = 100
