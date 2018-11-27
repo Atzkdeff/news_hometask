@@ -11,25 +11,26 @@ export class NewsList {
         return newsList
     }
 
-    addNews(articles) {
+    addNews(articles,) {
         this.articles = articles;
-        this.articles.forEach((article) => {
-            this.newsList.insertAdjacentHTML("beforeEnd", this.createArticle(article));
+        this.articles.forEach((article, i,) => {
+            this.newsList.insertAdjacentHTML("beforeEnd", this.createArticle(article, (this.articles.length - 1 === i)));
         });
     }
 
-    createArticle(article) {
+    createArticle(article, isLastArticle,) {
+        const authorName = article.author || "link";
         return `
             <article>
                 <h4>${ article.title }</h4>
                 
                 ${ article.urlToImage ? `<img src="${ article.urlToImage }">` : "" }
                 
-                <div class="content">${ article.content }</div>
+                ${ article.content ? `<div class="content">${ article.content }</div>` : ""}
                 
-                <a href="${ article.url }">${ article.author }</a>
+                <a href="${ article.url }">${ authorName }</a>
             </article>
-            <hr/>
+            ${ isLastArticle ? "" : "<hr/>"}
         `;
     }
 
