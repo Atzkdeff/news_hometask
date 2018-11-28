@@ -1,6 +1,8 @@
 import "@babel/polyfill";
 import "whatwg-fetch";
 
+import "../styles/main.scss";
+
 import { ChannelSelector } from "./channel-selector.js";
 import { NewsList } from "./news-list.js";
 
