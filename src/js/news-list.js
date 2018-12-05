@@ -4,7 +4,7 @@ export class NewsList {
     }
 
     createNewsList() {
-        const main = document.body.getElementsByTagName("main")[0];
+        const main = document.body.querySelector("main");
         const newsList = document.createElement("div");
         newsList.setAttribute("id", "news-list");
         main.appendChild(newsList);
@@ -24,7 +24,7 @@ export class NewsList {
             <article>
                 <h4>${ article.title }</h4>
                 
-                ${ article.urlToImage ? `<img src="${ article.urlToImage }">` : "" }
+                ${ article.urlToImage ? `<img src="${ article.urlToImage }" alt="${ article.title }">` : "" }
                 
                 ${ article.content ? `<div class="content">${ article.content }</div>` : ""}
                 

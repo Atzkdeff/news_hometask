@@ -1,12 +1,11 @@
 export class ChannelSelector {
     constructor(channels) {
-        this.channels = channels;
-        this.addChannels();
+        this.addChannels(channels);
     }
 
-    addChannels() {
+    addChannels(channels) {
         let channelList = document.getElementById("channel-list");
-        this.channels.forEach((channel) => {
+        channels.forEach((channel) => {
             channelList.appendChild(this.createOption(channel.name, channel.id));
         });
     }
